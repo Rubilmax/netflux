@@ -1,2 +1,2 @@
 # netflux
-Streaming platform (school project)
+Netflux and chull
