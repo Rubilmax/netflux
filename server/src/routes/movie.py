@@ -6,7 +6,7 @@ from flask_restful import Api
 
 from resources import MovieResource, MoviesResource, MovieCreateResource
 
-MOVIE_BLUEPRINT = Blueprint("movie", __name__)
+MOVIE_BLUEPRINT = Blueprint("movies", __name__)
 api = Api(MOVIE_BLUEPRINT)
 api.add_resource(MovieResource, "/movie/<string:movie_id>")
 api.add_resource(MoviesResource, "/movies")

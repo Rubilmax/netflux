@@ -6,7 +6,7 @@ from flask_restful import Api
 
 from resources import UserResource, UsersResource, UserCreateResource
 
-USER_BLUEPRINT = Blueprint("user", __name__)
+USER_BLUEPRINT = Blueprint("users", __name__)
 api = Api(USER_BLUEPRINT)
 api.add_resource(UserResource, "/user/<string:user_id>")
 api.add_resource(UsersResource, "/users")
