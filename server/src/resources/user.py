@@ -42,7 +42,9 @@ class UsersResource(Resource):
     @swag_from("../swagger/user/GET_ALL.yml")
     def get():
         """ Return an user key information based on his id """
-        return jsonify({"users": [user.json for user in UserRepository.get_all()]})
+        users = [user.json for user in UserRepository.get_all()]
+        average_age = round(sum(user["age"] for user in users)/len(users)) if len(users) > 0 else 0
+        return jsonify({"users": users, "average_age": average_age})
 
 class UserCreateResource(Resource):
 
