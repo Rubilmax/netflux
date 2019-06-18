@@ -16,30 +16,46 @@ class UserResource(Resource):
 
     @staticmethod
     @swag_from("../swagger/user/GET.yml")
-    def get(last_name, first_name):
-        """ Return an user key information based on his name """
-        user = UserRepository.get(last_name=last_name, first_name=first_name)
+    def get(user_id):
+        """ Return an user key information based on his id """
+        user = UserRepository.get(user_id=user_id)
         return jsonify({"user": user.json})
 
     @staticmethod
     @parse_params(
-        Argument("age", location="json", required=True, help="The age of the user.")
-    )
-    @swag_from("../swagger/user/POST.yml")
-    def post(last_name, first_name, age):
-        """ Create an user based on the sent information """
-        user = UserRepository.create(
-            last_name=last_name, first_name=first_name, age=age
-        )
-        return jsonify({"user": user.json})
-
-    @staticmethod
-    @parse_params(
-        Argument("age", location="json", required=True, help="The age of the user.")
+        Argument("last_name", location="json", required=True, help="The last name of the user."),
+        Argument("first_name", location="json", required=True, help="The first name of the user."),
+        Argument("email", location="json", required=True, help="The email of the user."),
+        Argument("age", location="json", required=True, help="The age of the user."),
+        Argument("gender", location="json", required=True, help="The gender of the user.")
     )
     @swag_from("../swagger/user/PUT.yml")
-    def put(last_name, first_name, age):
+    def put(user_id, last_name, first_name, email, age, gender):
         """ Update an user based on the sent information """
         repository = UserRepository()
-        user = repository.update(last_name=last_name, first_name=first_name, age=age)
+        user = repository.update(user_id=user_id, last_name=last_name, first_name=first_name, email=email, age=age, gender=gender)
+        return jsonify({"user": user.json})
+
+class UsersResource(Resource):
+
+    @staticmethod
+    @swag_from("../swagger/user/GET_ALL.yml")
+    def get():
+        """ Return an user key information based on his id """
+        return jsonify({"users": [user.json for user in UserRepository.get_all()]})
+
+class UserCreateResource(Resource):
+
+    @staticmethod
+    @parse_params(
+        Argument("last_name", location="json", required=True, help="The last name of the user."),
+        Argument("first_name", location="json", required=True, help="The first name of the user."),
+        Argument("email", location="json", required=True, help="The email of the user."),
+        Argument("age", location="json", required=True, help="The age of the user."),
+        Argument("gender", location="json", required=True, help="The gender of the user.")
+    )
+    @swag_from("../swagger/user/POST.yml")
+    def post(last_name, first_name, email, age, gender):
+        """ Create an user based on the sent information """
+        user = UserRepository.create(last_name=last_name, first_name=first_name, email=email, age=age, gender=gender)
         return jsonify({"user": user.json})
