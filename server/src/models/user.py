@@ -8,7 +8,7 @@ from .abc import BaseModel, MetaBaseModel
 class User(db.Model, BaseModel, metaclass=MetaBaseModel):
     """ The User model """
 
-    __tablename__ = "user"
+    __tablename__ = "users"
 
     user_id = db.Column(db.String(300), primary_key=True)
     first_name = db.Column(db.String(300), nullable=True)

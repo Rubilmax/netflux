@@ -17,9 +17,9 @@ class MovieResource(Resource):
 
     @staticmethod
     @swag_from("../swagger/movie/GET.yml")
-    def get(id):
+    def get(movie_id):
         """ Return a movie key information based on its id """
-        movie = MovieRepository.get(id=id)
+        movie = MovieRepository.get(movie_id=movie_id)
         return jsonify({"movie": movie.json})
 
     @staticmethod
@@ -27,10 +27,10 @@ class MovieResource(Resource):
         Argument("release_year", location="json", required=True, help="The release year of the movie.")
     )
     @swag_from("../swagger/movie/PUT.yml")
-    def put(id, title, author, release_year):
+    def put(movie_id, title, author, release_year):
         """ Update a movie based on the sent information """
         repository = MovieRepository()
-        movie = repository.update(id=id, title=title, author=author, release_year=release_year)
+        movie = repository.update(movie_id=movie_id, title=title, author=author, release_year=release_year)
         return jsonify({"movie": movie.json})
 
 class MoviesResource(Resource):
@@ -39,7 +39,7 @@ class MoviesResource(Resource):
     @swag_from("../swagger/movie/GET_ALL.yml")
     def get():
         """ Return all movies in database """
-        return jsonify({"movie": [movie.json for movie in MovieRepository.get_all()]})
+        return jsonify({"movies": [movie.json for movie in MovieRepository.get_all()]})
 
 class MovieCreateResource(Resource):
 

@@ -3,7 +3,7 @@ Return a movie key information based on its id
 tags:
   - movie
 parameters:
-  - name: id
+  - name: movie_id
     in: path
     type: string
     description: the id of the movie

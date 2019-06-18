@@ -8,23 +8,18 @@ class MovieRepository:
     """ The repository for the movie model """
 
     @staticmethod
-    def get(id):
+    def get(movie_id):
         """ Query a movie by id """
-        return Movie.query.filter_by(id=id).one()
-    
-    @staticmethod
-    def get(title, author):
-        """ Query a movie by title and author """
-        return Movie.query.filter_by(title=title, author=author).one()
+        return Movie.query.filter_by(movie_id=movie_id).one()
 
     @staticmethod
     def get_all():
         """ Query all saved movies """
         return Movie.query.filter_by()
 
-    def update(self, id, title, author, release_year):
+    def update(self, movie_id, title, author, release_year):
         """ Update a movie's release year """
-        movie = self.get(id)
+        movie = self.get(movie_id)
         movie.title = title
         movie.author = author
         movie.release_year = release_year
@@ -34,6 +29,6 @@ class MovieRepository:
     @staticmethod
     def create(title, author, release_year):
         """ Create a new movie """
-        movie = Movie(id=str(uuid.uuid4()), title=title, author=author, release_year=release_year)
+        movie = Movie(movie_id=str(uuid.uuid4()), title=title, author=author, release_year=release_year)
 
         return movie.save()
