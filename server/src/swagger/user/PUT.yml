@@ -3,28 +3,39 @@ Update an user based on the sent information
 tags:
   - user
 parameters:
-  - name: last_name
+  - name: user_id
     in: path
     type: string
-    description: the last name of the user
-  - name: first_name
-    in: path
-    type: string
-    description: the last name of the user
+    description: the unique id of the user
   - name: body
     in: body
     schema:
       type: object
       properties:
+        first_name:
+          type: string
+          description: The first name of the user
+        last_name:
+          type: string
+          description: The last name of the user
+        email:
+          type: string
+          description: The email of the user
         age:
           type: integer
           description: The age of the user
+        gender:
+          type: string
+          description: The gender of the user
 responses:
   200:
     description: The user was successfully created
     schema:
       example:
         user:
+          user_id: 00000000-0000-0000-0000-000000000000
           last_name: Doe
           first_name: John
+          email: john.doe@gmail.com
           age: 30
+          gender: male

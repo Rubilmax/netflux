@@ -1,0 +1,17 @@
+Return an user key information based on his unique id
+---
+tags:
+  - user
+responses:
+  200:
+    description: The users were successfully retrieved
+    schema:
+      example:
+        users:
+          user:
+            user_id: 00000000-0000-0000-0000-000000000000
+            last_name: Doe
+            first_name: John
+            email: john.doe@gmail.com
+            age: 30
+            gender: male
