@@ -11,8 +11,11 @@ services:
     depends_on:
       - db
     ports:
-      - 8000:3000
-    command: python src/server.py
+      - 5000:5000
+    environment:
+      FLASK_APP: src/server.py
+      FLASK_ENVIRONEMENT: development
+    command: vendor/bin/flask run --host=0.0.0.0
 
   dbdata:
     image: busybox
