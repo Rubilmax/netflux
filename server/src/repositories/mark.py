@@ -13,7 +13,7 @@ class MarkRepository:
 
     def update(self, movie_id, user_id, note):
         """ Update a mark """
-        mark = self.get(movie_id,user_id)
+        mark = self.get(movie_id, user_id)
         mark.note = note
 
         return mark.save()

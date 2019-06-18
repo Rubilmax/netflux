@@ -16,29 +16,23 @@ class MarkResource(Resource):
 
     @staticmethod
     @swag_from("../swagger/mark/GET.yml")
-    def get(movie_id,user_id):
+    def get(movie_id, user_id):
         """ Return the mark given by user to movie """
         mark = MarkRepository.get(movie_id=movie_id, user_id=user_id)
         return jsonify({"mark": mark.json})
 
     @staticmethod
     @parse_params(
-        Argument("movie_id", location="json", required=True, help="The ID of the movie."),
-        Argument("user_id", location="json", required=True, help="The ID of the user."),
         Argument("note", location="json", required=True, help="The mark given.")
     )
     @swag_from("../swagger/mark/POST.yml")
     def post(movie_id, user_id, note):
         """ Create a mark based on the sent information """
-        mark = MarkRepository.create(
-            movie_id=movie_id, user_id=user_id, note=note
-        )
+        mark = MarkRepository.create(movie_id=movie_id, user_id=user_id, note=note)
         return jsonify({"mark": mark.json})
 
     @staticmethod
     @parse_params(
-        Argument("movie_id", location="json", required=True, help="The ID of the movie."),
-        Argument("user_id", location="json", required=True, help="The ID of the user."),
         Argument("note", location="json", required=True, help="The mark given.")
     )
     @swag_from("../swagger/mark/PUT.yml")
