@@ -17,6 +17,11 @@ class MovieRepository:
         """ Query a movie by title and author """
         return Movie.query.filter_by(title=title, author=author).one()
 
+    @staticmethod
+    def get_all():
+        """ Query all saved movies """
+        return Movie.query.filter_by()
+
     def update(self, id, title, author, release_year):
         """ Update a movie's release year """
         movie = self.get(id)

@@ -1,0 +1,16 @@
+Return a movie key information based on his title and author
+---
+tags:
+  - movie
+parameters:
+responses:
+  200:
+    description: The movie's information were successfully retrieved
+    schema:
+      example:
+        movies:
+          movie:
+            id: 00000000-0000-0000-0000-000000000000
+            title: Iron Man
+            author: Jon Favreau
+            release_year: 2008

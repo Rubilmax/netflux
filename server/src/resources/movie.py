@@ -17,9 +17,15 @@ class MovieResource(Resource):
     @staticmethod
     @swag_from("../swagger/movie/GET.yml")
     def get(id):
-        """ Return an movie key information based on its id """
+        """ Return a movie key information based on its id """
         movie = MovieRepository.get(id=id)
         return jsonify({"movie": movie.json})
+
+    @staticmethod
+    @swag_from("../swagger/movie/GET_ALL.yml")
+    def get_all():
+        """ Return all movies in database """
+        return jsonify({"movie": MovieRepository.get_all().json})
 
     @staticmethod
     @parse_params(

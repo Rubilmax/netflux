@@ -1,4 +1,4 @@
-Return a movie key information based on his title and author
+Return a movie key information based on its id
 ---
 tags:
   - movie
