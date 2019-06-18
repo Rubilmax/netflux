@@ -41,3 +41,15 @@ class MarkResource(Resource):
         repository = MarkRepository()
         mark = repository.update(movie_id=movie_id, user_id=user_id, note=note)
         return jsonify({"mark": mark.json})
+
+class MovieMeanResource(Resource):
+
+    @staticmethod
+    @swag_from("../swagger/mark/GET_MEAN.yml")
+    def get():
+        """ Return the mark given by user to movie """
+        marks = MarkRepository.get_all()
+        mean = sum([mark.json["note"] for mark in marks])/len(marks) if len(marks) > 0 else 0
+        return jsonify({"mean": mean})
+
+

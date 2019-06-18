@@ -1,0 +1,10 @@
+Return the average mark based on movie ID
+---
+tags:
+  - mean
+responses:
+  200:
+    description: The average mark was successfully retrieved
+    schema:
+      example:
+        mean:6

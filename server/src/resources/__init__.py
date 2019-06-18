@@ -1,3 +1,4 @@
 from .user import UserResource, UsersResource, UserCreateResource
 from .movie import MovieResource, MoviesResource, MovieCreateResource
-from .mark import MarkResource
+from .mark import MarkResource,MovieMeanResource
+

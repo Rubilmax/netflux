@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53544204-5c29-4d17-a14f-fc6186347b60" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger/mark/GET_MEAN" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/mark.py" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/mark.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/mark.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mark.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/mark.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/mark.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,13 +14,48 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-536271379">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="GET_MEAN" value="1" />
+          <entry key="py" value="5" />
+          <entry key="yml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="5" />
+          <entry key="RNG Compact" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="GET_MEAN" value="80" />
+          <entry key="py" value="503" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="503" />
+          <entry key="RNG Compact" value="80" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/mark.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#30#46#0" expanded="true" />
               </folding>
@@ -30,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/mark.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+            <state relative-caret-position="165">
+              <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
               <folding>
                 <element signature="e#44#71#0" expanded="true" />
               </folding>
@@ -39,14 +75,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/__init__.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/swagger/mark/GET_MEAN">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/swagger/mark/GET.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -54,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#0#65#0" expanded="true" />
               </folding>
@@ -64,22 +106,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/repositories/__init__.py">
+        <entry file="file://$PROJECT_DIR$/repositories/mark.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="495">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="90">
               <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/user.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -87,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/mark.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+            <state relative-caret-position="528">
+              <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
               <folding>
                 <element signature="e#53#83#0" expanded="true" />
               </folding>
@@ -97,24 +145,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../migrations/versions/4f2e2c180af_.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../migrations/versions/11ad8ee2dd94_.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../migrations/versions/51e2c29ad95_.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -150,18 +184,19 @@
         <option value="$PROJECT_DIR$/swagger/mark/GET.yml" />
         <option value="$PROJECT_DIR$/swagger/mark/POST.yml" />
         <option value="$PROJECT_DIR$/swagger/mark/PUT.yml" />
-        <option value="$PROJECT_DIR$/routes/mark.py" />
-        <option value="$PROJECT_DIR$/resources/mark.py" />
-        <option value="$PROJECT_DIR$/repositories/mark.py" />
         <option value="$PROJECT_DIR$/models/mark.py" />
         <option value="$PROJECT_DIR$/routes/__init__.py" />
-        <option value="$PROJECT_DIR$/resources/__init__.py" />
         <option value="$PROJECT_DIR$/repositories/__init__.py" />
         <option value="$PROJECT_DIR$/models/__init__.py" />
+        <option value="$PROJECT_DIR$/repositories/mark.py" />
+        <option value="$PROJECT_DIR$/resources/mark.py" />
+        <option value="$PROJECT_DIR$/resources/__init__.py" />
+        <option value="$PROJECT_DIR$/routes/mark.py" />
+        <option value="$PROJECT_DIR$/swagger/mark/GET_MEAN" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="784" />
     <option name="y" value="-38" />
     <option name="width" value="906" />
@@ -173,7 +208,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,10 +240,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="swagger" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="swagger" type="462c0819:PsiDirectoryNode" />
+              <item name="mark" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -240,10 +281,10 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="7" />
+    <frame x="0" y="23" width="1440" height="798" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960254" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15503876" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -261,6 +302,9 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/swagger/movie/PUT.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -276,20 +320,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swagger/user/AVERAGE_AGE.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/swagger/user/AVERAGE_AGE.yml" />
     <entry file="file://$PROJECT_DIR$/models/movie.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#31#47#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -304,9 +339,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-90">
           <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-          <folding>
-            <element signature="e#38#62#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -345,20 +377,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swagger/mark/GET.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/movie.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#45#72#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -366,9 +388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
           <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="56" />
-          <folding>
-            <element signature="e#54#84#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -376,9 +395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="10" />
-          <folding>
-            <element signature="e#44#71#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -386,9 +402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#53#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -399,24 +412,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repositories/mark.py">
+    <entry file="file://$PROJECT_DIR$/routes/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.py">
+    <entry file="file://$PROJECT_DIR$/repositories/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../migrations/versions/51e2c29ad95_.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -426,44 +438,52 @@
     <entry file="file://$PROJECT_DIR$/../migrations/versions/11ad8ee2dd94_.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../migrations/versions/51e2c29ad95_.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/mark.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#30#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/mark.py">
+    <entry file="file://$PROJECT_DIR$/repositories/mark.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-          <folding>
-            <element signature="e#44#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="495">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/mark.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        <state relative-caret-position="528">
+          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
           <folding>
             <element signature="e#53#83#0" expanded="true" />
           </folding>
@@ -472,28 +492,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#0#65#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repositories/__init__.py">
+    <entry file="file://$PROJECT_DIR$/routes/mark.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        <state relative-caret-position="165">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#44#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/__init__.py">
+    <entry file="file://$PROJECT_DIR$/swagger/mark/GET.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        <state>
+          <caret selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swagger/mark/GET_MEAN">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>

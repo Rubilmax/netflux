@@ -24,3 +24,10 @@ class MarkRepository:
         mark = Mark(movie_id=movie_id, user_id=user_id, note=note)
 
         return mark.save()
+
+
+    @staticmethod
+    def get_all():
+        return Mark.query.filter_by()
+
+
