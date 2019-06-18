@@ -17,11 +17,11 @@ server = Flask(__name__)
 
 server.config["SWAGGER"] = {
     "swagger_version": "2.0",
-    "title": "Application",
+    "title": "Netflux",
     "specs": [
         {
             "version": "0.0.1",
-            "title": "Application",
+            "title": "Netflux",
             "endpoint": "spec",
             "route": "/application/spec",
             "rule_filter": lambda rule: True,  # all in
