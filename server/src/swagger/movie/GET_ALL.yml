@@ -1,11 +1,10 @@
-Return a movie key information based on his title and author
+Return a list of movies saved
 ---
 tags:
   - movie
-parameters:
 responses:
   200:
-    description: The movie's information were successfully retrieved
+    description: The movies were successfully retrieved
     schema:
       example:
         movies:

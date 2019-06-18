@@ -15,6 +15,7 @@ services:
     environment:
       FLASK_APP: src/server.py
       FLASK_ENVIRONEMENT: development
+      FLASK_DEBUG: "true"
     command: vendor/bin/flask run --host=0.0.0.0
 
   dbdata:

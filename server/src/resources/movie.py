@@ -7,9 +7,10 @@ from flask.json import jsonify
 from flask_restful import Resource
 from flask_restful.reqparse import Argument
 
-from repositories import UserRepository
+from repositories import MovieRepository
 from util import parse_params
 
+import json
 
 class MovieResource(Resource):
     """ Verbs relative to the movies """
@@ -22,22 +23,6 @@ class MovieResource(Resource):
         return jsonify({"movie": movie.json})
 
     @staticmethod
-    @swag_from("../swagger/movie/GET_ALL.yml")
-    def get_all():
-        """ Return all movies in database """
-        return jsonify({"movie": MovieRepository.get_all().json})
-
-    @staticmethod
-    @parse_params(
-        Argument("release_year", location="json", required=True, help="The release year of the movie.")
-    )
-    @swag_from("../swagger/movie/POST.yml")
-    def post(title, author, release_year):
-        """ Create a movie based on the sent information """
-        user = MovieRepository.create(title=title, author=author, release_year=release_year)
-        return jsonify({"movie": movie.json})
-
-    @staticmethod
     @parse_params(
         Argument("release_year", location="json", required=True, help="The release year of the movie.")
     )
@@ -45,5 +30,27 @@ class MovieResource(Resource):
     def put(id, title, author, release_year):
         """ Update a movie based on the sent information """
         repository = MovieRepository()
-        user = repository.update(id=id, title=title, author=author, release_year=release_year)
+        movie = repository.update(id=id, title=title, author=author, release_year=release_year)
+        return jsonify({"movie": movie.json})
+
+class MoviesResource(Resource):
+
+    @staticmethod
+    @swag_from("../swagger/movie/GET_ALL.yml")
+    def get():
+        """ Return all movies in database """
+        return jsonify({"movie": [movie.json for movie in MovieRepository.get_all()]})
+
+class MovieCreateResource(Resource):
+
+    @staticmethod
+    @parse_params(
+        Argument("title", location="json", required=True, help="The title of the movie."),
+        Argument("author", location="json", required=True, help="The author of the movie."),
+        Argument("release_year", location="json", required=True, help="The release year of the movie.")
+    )
+    @swag_from("../swagger/movie/POST.yml")
+    def post(title, author, release_year):
+        """ Create a movie based on the sent information """
+        movie = MovieRepository.create(title=title, author=author, release_year=release_year)
         return jsonify({"movie": movie.json})

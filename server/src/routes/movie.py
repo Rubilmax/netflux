@@ -4,9 +4,10 @@ Defines the blueprint for the movies
 from flask import Blueprint
 from flask_restful import Api
 
-from resources import UserResource
+from resources import MovieResource, MoviesResource, MovieCreateResource
 
 MOVIE_BLUEPRINT = Blueprint("movie", __name__)
-Api(MOVIE_BLUEPRINT).add_resource(
-    MovieResource, "/movie/<string:id>"
-)
+api = Api(MOVIE_BLUEPRINT)
+api.add_resource(MovieResource, "/movie/<string:id>")
+api.add_resource(MoviesResource, "/movies")
+api.add_resource(MovieCreateResource, "/movie/add")

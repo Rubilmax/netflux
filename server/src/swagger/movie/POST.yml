@@ -10,10 +10,10 @@ parameters:
       properties:
         title:
           type: string
-          description: the title of the movie
+          description: The title of the movie
         author:
           type: string
-          description: the author of the movie
+          description: The author of the movie
         release_year:
           type: integer
           description: The release year of the movie
