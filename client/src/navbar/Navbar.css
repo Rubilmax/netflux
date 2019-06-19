@@ -1,12 +1,24 @@
-.Nav-header {
-  background-color: black;
-  min-height: 10vh;
-
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: red;
+.navbar {
   font-family: "Arial";
-  font-style : bold
+  font-style : bold;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 0.8em 1.4em;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: #eee;
+  transition: all .4s ease;
+}
+
+.nav-link a:hover {
+  color: #aaa;
 }
