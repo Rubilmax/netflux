@@ -25,9 +25,8 @@ class MarkRepository:
 
         return mark.save()
 
-
     @staticmethod
-    def get_all():
-        return Mark.query.filter_by()
+    def get(movie_id):
+        return Mark.query.filter_by(movie_id=movie_id)
 
 

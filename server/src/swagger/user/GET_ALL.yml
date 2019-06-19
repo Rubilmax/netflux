@@ -1,7 +1,7 @@
 Return an user key information based on his unique id
 ---
 tags:
-  - user
+  - users
 responses:
   200:
     description: The users were successfully retrieved

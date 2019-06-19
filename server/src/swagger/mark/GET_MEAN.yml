@@ -2,9 +2,14 @@ Return the average mark based on movie ID
 ---
 tags:
   - mean
+parameters:
+  - name: movie_id
+    in: path
+    type: string
+    description: the ID of the movie
 responses:
   200:
     description: The average mark was successfully retrieved
     schema:
       example:
-        mean:6
+        mean: 6

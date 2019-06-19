@@ -1,7 +1,7 @@
 Create a mark given to a movie by a user based on the sent information
 ---
 tags:
-  - mark
+  - marks
 parameters:
   - name: movie_id
     in: path

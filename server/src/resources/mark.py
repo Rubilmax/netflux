@@ -46,10 +46,10 @@ class MovieMeanResource(Resource):
 
     @staticmethod
     @swag_from("../swagger/mark/GET_MEAN.yml")
-    def get():
+    def get(movie_id):
         """ Return the mark given by user to movie """
-        marks = MarkRepository.get_all()
-        mean = sum([mark.json["note"] for mark in marks])/len(marks) if len(marks) > 0 else 0
-        return jsonify({"mean": mean})
+        marks = [mark.json for mark in MarkRepository.get(movie_id=movie_id)]
+        mean = sum([mark["note"] for mark in marks])/len(marks) if len(marks) > 0 else 0
+        return jsonify({"marks": marks, "mean": mean})
 
 

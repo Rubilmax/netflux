@@ -1,7 +1,7 @@
 Create a movie based on the sent information
 ---
 tags:
-  - movie
+  - movies
 parameters:
   - name: body
     in: body

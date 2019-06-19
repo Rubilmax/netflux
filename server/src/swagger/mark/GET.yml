@@ -1,7 +1,7 @@
 Return a mark based on user ID and movie ID
 ---
 tags:
-  - mark
+  - marks
 parameters:
   - name: movie_id
     in: path
