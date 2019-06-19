@@ -5,6 +5,18 @@ import './App.css';
 function Home() {
   return (
     <div className="App">
+
+    <div className="Boutons">
+      <button>
+        <p>
+          SE CONNECTER
+        </p>
+        <p>
+          S'INSCRIRE
+        </p>
+      </button>
+    </div>
+    
     <div class="recherche_p">
 
     <form action="/search" id="searchthis" method="get">
