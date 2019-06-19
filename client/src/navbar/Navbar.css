@@ -1,0 +1,12 @@
+.Nav-header {
+  background-color: black;
+  min-height: 10vh;
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: red;
+  font-family: "Arial";
+  font-style : bold
+}
