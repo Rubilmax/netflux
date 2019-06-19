@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import './Navbar.css';
 
 import Login from "../login/Login";
 import Register from "../register/Register";
@@ -10,7 +11,7 @@ import Home from "../home/Home";
 function Navbar() {
     return (
         <Router>
-          <div>
+          <div class="Nav-header">
             <ul>
               <li><Link to="/">Accueil</Link></li>
               <li><Link to="/movies">Films</Link></li>
