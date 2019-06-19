@@ -23,7 +23,7 @@ server.config["SWAGGER"] = {
             "version": "0.0.1",
             "title": "Netflux",
             "endpoint": "spec",
-            "route": "/application/spec",
+            "route": "/api/spec",
             "rule_filter": lambda rule: True,  # all in
         }
     ],
