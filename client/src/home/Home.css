@@ -1,50 +1,43 @@
-  .App-header {
-    background-color: black;
-    min-height: 100vh;
+.home-logo {
+  justify-content: center;
+  font-size: 1.5em;
+  color: #DB202C;
+  font-family: "Arial";
+  font-style : bold;
+}
 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: red;
-    font-family: "Arial";
-    font-style : bold
-  }
-  
-  .App-body {
-    background-color: black;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: #dc1a28;
-    font-family: "Arial";
-  }  
-  
-  /* Fond du gadget de la barre de recherche */
-  .recherche_p {
-    background-color: black;   /* Couleur de fond */
-    border-style: solid;   /* Style de la bordure  */
-    border-width: 0px;   /* Epaisseur de la bordure  */
-    border-color: red;   /* Couleur de la bordure  */
-    padding: 10px 10px 10px 10px;   /* Espace entre les bords et le contenu : haut droite bas gauche  */
-  }
-  
-  /* Bouton valider */
-  #searchthis #search-btn {
-    background-color: black;   /* Couleur de fond */
-    border-style: solid;   /* Style de la bordure  */
-    border-width: 1px;   /* Epaisseur de la bordure  */
-    border-color: #E8B960;   /* Couleur de la bordure  */
-    padding: 5px 5px 5px 5px;   /* Espace entre les bords et le contenu : haut droite bas gauche  */
-    width: 70%;   /* Permet d'ajuster la largeur du bouton à 100% */
-    box-sizing: border-box;   /* Important */
-    font-family: Arial;   /* Police du texte */
-    font-size: 11px;   /* Taille de la police du texte */
-    font-weight: normal;   /* Graisse du texte : normal = normal ; bold = gras */
-    margin: 10px 0 0 0;   /* Espace autour du bouton : haut droite bas gauche  */
-    color: #ffffff;   /* Couleur du texte */
-    align-items: center;
-    justify-content: center;
-  }
+#search-input {
+  background: #212121;
+  border: none;
+  color: #eee;
+  height: 3.5em;
+  width: 25em;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 1em;
+  border-radius: 0.5em;
+  margin: 0;
+}
 
+#search-input:focus {
+  outline: none;
+}
+
+#search-btn {
+  background: transparent;
+  padding: 0.5em;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 2em;
+  transition: all .4s ease;
+  margin-left: -3.5em;
+}
+
+#search-btn:hover {
+  background: #000;
+  transform: scale(1.4);
+}
+
+#search-btn:focus {
+  outline: none;
+}

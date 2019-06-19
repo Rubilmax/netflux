@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .Nav-header {
   background-color: black;
   min-height: 10vh;
@@ -6,6 +7,33 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: red;
+=======
+.navbar {
+>>>>>>> f4a8e538df433c950245e21beb74217683d76e29
   font-family: "Arial";
-  font-style : bold
+  font-style : bold;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 0.8em 1.4em;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: #eee;
+  transition: all .4s ease;
+}
+
+.nav-link a:hover {
+  color: #aaa;
+}
+
+.nav-link-active {
+  font-weight: 700;
 }
