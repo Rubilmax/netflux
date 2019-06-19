@@ -17,10 +17,10 @@ class Movie extends React.Component {
 
     render() {
         return (
-            <div class="movie">
-                <h1 class="movie-title">{ this.state.movie.title }</h1>
-                <p class="movie-desc">Réalisé par <i>{ this.state.movie.author }</i> en { this.state.movie.release_year }</p>
-                <p class="movie-mark">Note moyenne des téléspectateurs : { this.state.movie.average_mark } &#9733;</p>
+            <div className="movie">
+                <h1 className="movie-title">{ this.state.movie.title }</h1>
+                <p className="movie-desc">Réalisé par <i>{ this.state.movie.author }</i> en { this.state.movie.release_year }</p>
+                <p className="movie-mark">Note moyenne des téléspectateurs : { this.state.movie.average_mark } &#9733;</p>
             </div>
         );
     }

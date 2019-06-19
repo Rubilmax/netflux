@@ -13,7 +13,7 @@ import Home from "../home/Home";
 
 function App() {
   return (
-    <div class="app-body">
+    <div className="app-body">
       <BrowserRouter>
         <Navbar />
 
