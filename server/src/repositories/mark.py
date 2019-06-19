@@ -29,11 +29,7 @@ class MarkRepository:
     def get(movie_id):
         return Mark.query.filter_by(movie_id=movie_id)
 
-
     @staticmethod
-    def get_best():
-        "récupérer les 10 meilleurs films"
+    def get_all():
+        "Récupérer toutes les notes"
         return Mark.query.filter_by()
-
-
-

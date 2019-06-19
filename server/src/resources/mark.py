@@ -51,30 +51,4 @@ class MovieMeanResource(Resource):
         """ Return the mark given by user to movie """
         marks = [mark.json for mark in MarkRepository.get(movie_id=movie_id)]
         mean = sum([mark["note"] for mark in marks])/len(marks) if len(marks) > 0 else 0
-        return jsonify({"marks": marks, "mean": mean})
-
-class MovieBestResource(Resource):
-
-    @staticmethod
-    @swag_from("../swagger/mark/GET_BEST.yml")
-    def get():
-        """ Return the 10 best movies """
-        table = {}
-        for movie_id in MovieRepository.get_all():
-            marks = [mark.json for mark in MarkRepository.get(movie_id=movie_id)]
-            mean = sum([mark["note"] for mark in marks])/len(marks) if len(marks) > 0 else 0
-            table[movie_id] = mean
-
-        trieDecroissant = lambda dico : sorted(dico.items(), lambda a,b: cmp(a[1],b[1]), reverse=True)
-        table = trieDecroissant(table)
-        table2 = []
-        i=0
-        for film in table:
-            if i<10:
-                table2.append(table[film])
-                i=i+1
-            else :
-                break
-        return jsonify({"best": table2})
-
-
+        return jsonify({"marks": marks, "average_mark": mean})

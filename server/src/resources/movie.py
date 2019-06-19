@@ -8,6 +8,7 @@ from flask_restful import Resource
 from flask_restful.reqparse import Argument
 
 from repositories import MovieRepository
+from resources import MovieMeanResource
 from util import parse_params
 
 import json
@@ -39,7 +40,11 @@ class MoviesResource(Resource):
     @swag_from("../swagger/movie/GET_ALL.yml")
     def get():
         """ Return all movies in database """
-        return jsonify({"movies": [movie.json for movie in MovieRepository.get_all()]})
+        movies = [movie.json for movie in MovieRepository.get_all()]
+        for movie in movies:
+            movie["average_mark"] = MovieMeanResource.get(movie["movie_id"]).json["average_mark"]
+        sorted_movies = sorted(movies, key = lambda movie: movie["average_mark"], reverse = True)
+        return jsonify({"movies": sorted_movies})
 
 class MovieCreateResource(Resource):
 
