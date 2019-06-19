@@ -1,7 +1,7 @@
   .App-header {
     background-color: black;
     min-height: 100vh;
-    
+
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -28,8 +28,6 @@
     border-width: 0px;   /* Epaisseur de la bordure  */
     border-color: red;   /* Couleur de la bordure  */
     padding: 10px 10px 10px 10px;   /* Espace entre les bords et le contenu : haut droite bas gauche  */
-    position: absolute;
-    top: 375px; left: 475px;
   }
   
   /* Bouton valider */
@@ -46,7 +44,7 @@
     font-weight: normal;   /* Graisse du texte : normal = normal ; bold = gras */
     margin: 10px 0 0 0;   /* Espace autour du bouton : haut droite bas gauche  */
     color: #ffffff;   /* Couleur du texte */
-    position: absolute;
-    top: 35px; left: 28px;
+    align-items: center;
+    justify-content: center;
   }
 
