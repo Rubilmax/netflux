@@ -16,6 +16,7 @@ function Home() {
                     <input id="search-btn" type="submit" value="&#x1F50D;" />
                 </form>
             </div>
+            
         </div>
     );
 }
