@@ -15,7 +15,7 @@ class TestSwagger(unittest.TestCase):
 
         with warnings.catch_warnings():
             warnings.filterwarnings("ignore", message="unclosed file")
-            response = self.client.get("/application/spec")
+            response = self.client.get("/api/spec")
         self.assertEqual(response.status_code, 200)
 
     def test_swagger_is_not_empty(self):
@@ -25,6 +25,6 @@ class TestSwagger(unittest.TestCase):
 
         with warnings.catch_warnings():
             warnings.filterwarnings("ignore", message="unclosed file")
-            response = self.client.get("/application/spec")
+            response = self.client.get("/api/spec")
         response_json = json.loads(response.data.decode("utf-8"))
         self.assertTrue(response_json["paths"])

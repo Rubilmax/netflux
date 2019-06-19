@@ -40,7 +40,7 @@ $ make server.install      # Install the pip dependencies on the docker containe
 $ make server.start        # Run the container containing your local python server
 ```
 
-If everything works, you should see the available routes [here](http://127.0.0.1:8000/application/spec).
+If everything works, you should see the available routes [here](http://127.0.0.1:8000/api/spec).
 
 The API runs locally on docker containers. You can easily change the python version you are willing to use [here](https://github.com/antkahn/flask-api-starter-kit/blob/master/docker-compose.yml#L4), by fetching a docker image of the python version you want.
 
@@ -163,5 +163,5 @@ $ make format.isort # Apply Isort on every file
 Your API needs a description of it's routes and how to interact with them.
 You can easily do that with the swagger package included in the starter kit.
 Simply add a docstring to the resources of your API like in the `user` example.
-The API description will be available [here](http://127.0.0.1:8000/application/spec).
+The API description will be available [here](http://127.0.0.1:8000/api/spec).
 The Swagger UI will be available [here](http://127.0.0.1:8000/apidocs/).
