@@ -20,8 +20,9 @@ function Navbar() {
               <li class="nav-link"><NavLink to="/register" activeClassName="nav-link-active">Inscription</NavLink></li>
             </ul>
           </div>
+          
           <Route exact path="/home" component={Home} />
-          <Route path="/movies" component={Movies} />
+          <Route exact strict path="/movies" component={Movies} />
           <Route path="/suggests" component={Interests} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
