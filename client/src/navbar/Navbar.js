@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import './Navbar.css';
 
 import Login from "../login/Login";
@@ -13,14 +13,14 @@ function Navbar() {
         <Router>
           <div class="navbar">
             <ul class="nav-links">
-              <li class="nav-link"><Link to="/">Accueil</Link></li>
-              <li class="nav-link"><Link to="/movies">Films</Link></li>
-              <li class="nav-link"><Link to="/suggests">Suggestions</Link></li>
-              <li class="nav-link"><Link to="/login">Connexion</Link></li>
-              <li class="nav-link"><Link to="/register">Inscription</Link></li>
+              <li class="nav-link"><NavLink to="/home" activeClassName="nav-link-active">Accueil</NavLink></li>
+              <li class="nav-link"><NavLink to="/movies" activeClassName="nav-link-active">Films</NavLink></li>
+              <li class="nav-link"><NavLink to="/suggests" activeClassName="nav-link-active">Suggestions</NavLink></li>
+              <li class="nav-link"><NavLink to="/login" activeClassName="nav-link-active">Connexion</NavLink></li>
+              <li class="nav-link"><NavLink to="/register" activeClassName="nav-link-active">Inscription</NavLink></li>
             </ul>
           </div>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
           <Route path="/movies" component={Movies} />
           <Route path="/suggests" component={Interests} />
           <Route path="/login" component={Login} />
