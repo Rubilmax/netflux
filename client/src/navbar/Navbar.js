@@ -11,11 +11,11 @@ import Home from "../home/Home";
 function Navbar() {
     return (
         <Router>
-          <div class="Nav-header">
-            <ul>
-              <li><Link to="/">Accueil</Link></li>
-              <li><Link to="/movies">Films</Link></li>
-              <li><Link to="/interests">Recommandations</Link></li>
+          <div class="navbar">
+            <ul class="nav-links">
+              <li class="nav-link"><Link to="/">Accueil</Link></li>
+              <li class="nav-link"><Link to="/movies">Films</Link></li>
+              <li class="nav-link"><Link to="/interests">Recommandations</Link></li>
             </ul>
           </div>
           <Route exact path="/" component={Home} />
