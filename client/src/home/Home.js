@@ -16,6 +16,7 @@ function Home() {
                 <img src={logo} class="App-logo" alt="logo" />
                 <p>NETFLUX AND CHULL</p>
             </div>
+            
         </div>
     );
 }
