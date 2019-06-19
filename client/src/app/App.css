@@ -1,8 +1,8 @@
-.App {
-  width: 100%;
+.app-body {
   position: absolute;
-  top:0;
-  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: #14171b;
   text-align: center;
-  min-height: 200vh;
 }

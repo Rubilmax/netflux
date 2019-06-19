@@ -4,19 +4,17 @@ import './Home.css';
 
 function Home() {
     return (
-        <div class="home">
-
-    
-            <div class="App-header">
-                <img src={logo} class="App-logo" alt="logo" />
-                <p>NETFLUX AND CHULL</p>
+        <div class="home-body">
+            <div class="home-logo">
+                <img src={logo} alt="logo" />
+                <p>NETFLUX & CHULL</p>
             </div>
 
-            <div class="recherche_p">
-            <form action="/search" id="searchthis" method="get">
-                <input id="search" name="q" type="text" placeholder="Titre du film" />
-                <input id="search-btn" type="submit" value="Recherche &#x1F50D;" />
-            </form>
+            <div class="search">
+                <form action="/search" class="search-form" method="get">
+                    <input id="search-input" name="search-input" type="text" placeholder="Rechercher un film" required />
+                    <input id="search-btn" type="submit" value="&#x1F50D;" />
+                </form>
             </div>
         </div>
     );
