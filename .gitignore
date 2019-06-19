@@ -6,3 +6,5 @@ vendor/
 .vscode
 .coverage
 coverage/
+.idea
+/.idea

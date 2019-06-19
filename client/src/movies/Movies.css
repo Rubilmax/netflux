@@ -1,0 +1,19 @@
+.movies {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: #ddd;
+}
+
+.movie {
+    padding: 2.6em;
+}
+
+.movie .movie-title a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.movie .movie-author {
+    margin: 0.25em;
+}
