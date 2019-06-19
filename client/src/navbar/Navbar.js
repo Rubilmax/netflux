@@ -15,12 +15,14 @@ function Navbar() {
             <ul class="nav-links">
               <li class="nav-link"><Link to="/">Accueil</Link></li>
               <li class="nav-link"><Link to="/movies">Films</Link></li>
-              <li class="nav-link"><Link to="/interests">Recommandations</Link></li>
+              <li class="nav-link"><Link to="/suggests">Suggestions</Link></li>
+              <li class="nav-link"><Link to="/login">Connexion</Link></li>
+              <li class="nav-link"><Link to="/register">Inscription</Link></li>
             </ul>
           </div>
           <Route exact path="/" component={Home} />
           <Route path="/movies" component={Movies} />
-          <Route path="/interests" component={Interests} />
+          <Route path="/suggests" component={Interests} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
         </Router>
