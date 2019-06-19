@@ -1,7 +1,7 @@
 Return a list of movies saved
 ---
 tags:
-  - movie
+  - movies
 responses:
   200:
     description: The movies were successfully retrieved

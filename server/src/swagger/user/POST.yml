@@ -1,7 +1,7 @@
 Create an user based on the sent information
 ---
 tags:
-  - user
+  - users
 parameters:
   - name: body
     in: body

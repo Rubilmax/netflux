@@ -1,0 +1,31 @@
+Update a mark based on the sent information
+---
+tags:
+  - marks
+parameters:
+  - name: movie_id
+    in: path
+    type: string
+    description: the id of the movie
+  - name: user_id
+    in: path
+    type: string
+    description: the id of the user
+  - name: body
+    in: body
+    schema:
+      type: object
+      properties:
+        note:
+          type: integer
+          description: The mark given to the movie by the user
+responses:
+  200:
+    description: The movie was successfully marked by the user
+    schema:
+      example:
+        mark:
+          movie_id: 00000000-0000-0000-0000-00000001
+          user_id: 00000000-0000-0000-0000-00000001
+          note: 10
+

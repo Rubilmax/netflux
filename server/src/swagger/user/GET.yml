@@ -1,7 +1,7 @@
 Return an user key information based on his unique id
 ---
 tags:
-  - user
+  - users
 parameters:
   - name: user_id
     in: path

@@ -1,7 +1,7 @@
 Return a movie key information based on its id
 ---
 tags:
-  - movie
+  - movies
 parameters:
   - name: movie_id
     in: path

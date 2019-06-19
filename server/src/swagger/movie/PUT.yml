@@ -1,7 +1,7 @@
 Update a movie based on the sent information
 ---
 tags:
-  - movie
+  - movies
 parameters:
   - name: movie_id
     in: path
