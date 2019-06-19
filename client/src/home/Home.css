@@ -1,6 +1,5 @@
   .App-header {
     background-color: black;
-    min-height: 100vh;
 
     flex-direction: column;
     align-items: center;
@@ -24,9 +23,6 @@
   /* Fond du gadget de la barre de recherche */
   .recherche_p {
     background-color: black;   /* Couleur de fond */
-    border-style: solid;   /* Style de la bordure  */
-    border-width: 0px;   /* Epaisseur de la bordure  */
-    border-color: red;   /* Couleur de la bordure  */
     padding: 10px 10px 10px 10px;   /* Espace entre les bords et le contenu : haut droite bas gauche  */
   }
   
@@ -37,14 +33,12 @@
     border-width: 1px;   /* Epaisseur de la bordure  */
     border-color: #E8B960;   /* Couleur de la bordure  */
     padding: 5px 5px 5px 5px;   /* Espace entre les bords et le contenu : haut droite bas gauche  */
-    width: 70%;   /* Permet d'ajuster la largeur du bouton à 100% */
+    width: 10%;   /* Permet d'ajuster la largeur du bouton à 100% */
     box-sizing: border-box;   /* Important */
     font-family: Arial;   /* Police du texte */
     font-size: 11px;   /* Taille de la police du texte */
     font-weight: normal;   /* Graisse du texte : normal = normal ; bold = gras */
-    margin: 10px 0 0 0;   /* Espace autour du bouton : haut droite bas gauche  */
+    margin: 0px 0 0 0;   /* Espace autour du bouton : haut droite bas gauche  */
     color: #ffffff;   /* Couleur du texte */
-    align-items: center;
-    justify-content: center;
   }
 
