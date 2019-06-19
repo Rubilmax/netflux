@@ -20,8 +20,9 @@ class MovieResource(Resource):
     @swag_from("../swagger/movie/GET.yml")
     def get(movie_id):
         """ Return a movie key information based on its id """
-        movie = MovieRepository.get(movie_id=movie_id)
-        return jsonify({"movie": movie.json})
+        movie = MovieRepository.get(movie_id=movie_id).json
+        movie["average_mark"] = MovieMeanResource.get(movie["movie_id"]).json["average_mark"]
+        return jsonify({"movie": movie})
 
     @staticmethod
     @parse_params(

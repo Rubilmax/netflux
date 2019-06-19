@@ -5,13 +5,18 @@
     color: #ddd;
 }
 
-.movie {
-    padding: 2.6em;
-}
-
-.movie .movie-title a {
+.movies a {
     text-decoration: none;
     color: #ddd;
+    transition: all .4s ease;
+}
+
+.movies a:hover {
+    background: #212121;
+}
+
+.movie {
+    padding: 2.6em;
 }
 
 .movie .movie-author {

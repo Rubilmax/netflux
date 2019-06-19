@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from "axios";
 
+import './Movie.css';
+
 class Movie extends React.Component {
     
     constructor(props) {
@@ -15,7 +17,11 @@ class Movie extends React.Component {
 
     render() {
         return (
-            <h1>{ this.state.movie.title }</h1>
+            <div class="movie">
+                <h1 class="movie-title">{ this.state.movie.title }</h1>
+                <p class="movie-desc">Réalisé par <i>{ this.state.movie.author }</i> en { this.state.movie.release_year }</p>
+                <p class="movie-mark">Note moyenne des téléspectateurs : { this.state.movie.average_mark } &#9733;</p>
+            </div>
         );
     }
 }

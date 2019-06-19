@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from "axios";
 
-import Movie from '../movie/Movie';
 import './Movies.css';
 
 class Movies extends React.Component {
@@ -19,18 +18,17 @@ class Movies extends React.Component {
 
     render() {
         return (
-            <Router>
-                <div class="movies">
-                    { this.state.movies.map(movie =>
+            <div class="movies">
+                { this.state.movies.map(movie =>
+                <Link to={ `/movies/${ movie.movie_id }` }>
                     <div class="movie" key={ movie.movie_id } >
-                        <h3 class="movie-title"><Link to={ `/movies/${ movie.movie_id }` }>{ movie.title }</Link></h3>
+                        <h3 class="movie-title">{ movie.title }</h3>
                         <p class="movie-author">{ movie.author }</p>
                         <i class="movie-year">{ movie.release_year }</i>
-                    </div>) }
-                </div>
-
-                <Route path="/movies/:movie_id" component={Movie} />
-            </Router>
+                        <p class="movie-mark">{ movie.average_mark } &#9733;</p>
+                    </div>
+                </Link>) }
+            </div>
         );
     }
 }
