@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './logo1.png';
 import './App.css';
 
-function App() {
+function Home() {
   return (
     <div className="App">
+    <div class="recherche_p">
+
+    <form action="/search" id="searchthis" method="get">
+    <input id="search" name="q" type="text" placeholder="Title" />
+    <input id="search-btn" type="submit" value="Rechercher" />
+    </form>
+
+    </div>
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          NETFLUX AND CHULL
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
 }
 
-export default App;
+  
+export default Home;
