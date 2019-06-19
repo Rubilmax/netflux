@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: red;
+    color: #dc1a28;
     font-family: "Arial";
   }  
   
@@ -28,6 +28,8 @@
     border-width: 0px;   /* Epaisseur de la bordure  */
     border-color: red;   /* Couleur de la bordure  */
     padding: 10px 10px 10px 10px;   /* Espace entre les bords et le contenu : haut droite bas gauche  */
+    position: absolute;
+    top: 375px; left: 475px;
   }
   
   /* Bouton valider */
@@ -37,13 +39,14 @@
     border-width: 1px;   /* Epaisseur de la bordure  */
     border-color: #E8B960;   /* Couleur de la bordure  */
     padding: 5px 5px 5px 5px;   /* Espace entre les bords et le contenu : haut droite bas gauche  */
-    width: 98.5%;   /* Permet d'ajuster la largeur du bouton à 100% */
+    width: 70%;   /* Permet d'ajuster la largeur du bouton à 100% */
     box-sizing: border-box;   /* Important */
-    font-family: Times New Roman;   /* Police du texte */
-    font-size: 13px;   /* Taille de la police du texte */
+    font-family: Arial;   /* Police du texte */
+    font-size: 11px;   /* Taille de la police du texte */
     font-weight: normal;   /* Graisse du texte : normal = normal ; bold = gras */
-    letter-spacing: 1px;   /* Espacement des caractères */
     margin: 10px 0 0 0;   /* Espace autour du bouton : haut droite bas gauche  */
-    text-transform: uppercase;   /* Transforme le texte en majuscules */
     color: #ffffff;   /* Couleur du texte */
+    position: absolute;
+    top: 35px; left: 28px;
   }
+

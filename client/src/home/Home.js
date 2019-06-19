@@ -7,8 +7,8 @@ function Home() {
         <div class="home">
             <div class="recherche_p">
             <form action="/search" id="searchthis" method="get">
-                <input id="search" name="q" type="text" placeholder="Title" />
-                <input id="search-btn" type="submit" value="Rechercher" />
+                <input id="search" name="q" type="text" placeholder="Titre du film" />
+                <input id="search-btn" type="submit" value="Recherche &#x1F50D;" />
             </form>
             </div>
     
