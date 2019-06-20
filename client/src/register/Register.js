@@ -1,37 +1,31 @@
 import React from "react";
 
+import './Register.css';
+
 function Register() {
     return (
-        <div class="Register">
-        <div>Inscription</div>
-        <div class="Inscription">
-            <form action="/search" id="searchthis" method="post">
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Adresse e-mail" />
-            </form>
+        <div className="register">
+            <h1>Inscription</h1>
+            <form action="" className="register-form" method="post">
+                <input className="register-input email" type="email" placeholder="Adresse e-mail" required />
+                <input className="register-input first-name" type="text" placeholder="Prénom" required />
+                <input className="register-input last-name" type="text" placeholder="Nom" required />
+                <input className="register-input age" type="number" placeholder="Age" required />
 
-            <form action="/search" id="searchthis" method="post">
-                <label for="first_name"><b>Email</b></label>
-                <input type="text" placeholder="Prénom" />
+                <div className="gender-input">
+                    <input id="male" type="radio" name="gender" value="male" />
+                    <label for="male">Homme</label>
+                </div>
+                <div className="gender-input">
+                    <input id="female" type="radio" name="gender" value="female" />
+                    <label for="female">Femme</label>
+                </div>
+                <div className="gender-input">
+                    <input id="unknown" type="radio" name="gender" value="unknown" />
+                    <label for="unknown">Autre</label>
+                </div>
+                <input className="register-btn" type="submit" value="Inscription" />
             </form>
-
-            <form action="/search" id="searchthis" method="post">
-                <label for="last_name"><b>Email</b></label>
-                <input type="text" placeholder="Nom de famille" />
-            </form>
-
-            <form action="/search" id="searchthis" method="post">
-                <label for="age"><b>Email</b></label>
-                <input type="text" placeholder="Age" />
-            </form>
-
-            <form action="/search" id="searchthis" method="post">
-                <label for="sex"><b>Email</b></label>
-                <input type="text" placeholder="Sexe" />
-            </form>
-
-            <button type="submit" class="registerbtn">S'inscrire</button>
-        </div>
         </div>
     );
 }
