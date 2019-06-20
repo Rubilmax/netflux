@@ -73,5 +73,4 @@ class UserLoginResource(Resource):
         user = UserRepository.get(email=email).json
         response = jsonify({ "user": user })
         response.set_cookie(key="user_id", value=user["user_id"])
-        #response.headers['Set-Cookie'] = "user_id-" + user["user_id"]
         return response

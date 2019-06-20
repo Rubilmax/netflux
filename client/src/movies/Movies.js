@@ -13,7 +13,7 @@ class Movies extends React.Component {
 
         this.handleSearch = this.handleSearch.bind(this);
         this.search = this.search.bind(this);
-        //this.getMovies();
+        this.getMovies();
     }
 
     handleSearch(event) {
