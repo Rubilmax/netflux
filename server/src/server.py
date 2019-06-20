@@ -36,7 +36,7 @@ server.debug = config.DEBUG
 server.config["SQLALCHEMY_DATABASE_URI"] = config.DB_URI
 server.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = config.SQLALCHEMY_TRACK_MODIFICATIONS
 
-CORS(server)
+CORS(server, allow_headers='*', expose_headers='*', supports_credentials=True)
 db.init_app(server)
 db.app = server
 

@@ -1,7 +1,10 @@
 .home-logo {
-  justify-content: center;
   font-size: 1.5em;
   color: #DB202C;
   font-family: "Arial";
   font-style : bold;
+}
+
+.home-logo img {
+  width: 50vw;
 }
