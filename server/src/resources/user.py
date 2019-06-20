@@ -7,7 +7,8 @@ from flask.json import jsonify
 from flask_restful import Resource
 from flask_restful.reqparse import Argument
 
-from repositories import UserRepository
+from repositories import UserRepository, MovieRepository, MarkRepository
+from resources import MovieMeanResource
 from util import parse_params
 
 
@@ -18,8 +19,13 @@ class UserResource(Resource):
     @swag_from("../swagger/user/GET.yml")
     def get(user_id):
         """ Return an user key information based on his id """
-        user = UserRepository.get_from_id(user_id=user_id)
-        return jsonify({"user": user.json})
+        user = UserRepository.get_from_id(user_id=user_id).json
+        movie_ids = [mark.movie_id for mark in MarkRepository.get_from_user_id(user_id=user["user_id"])]
+        user["seen_movies"] = [MovieRepository.get(movie_id=movie_id).json for movie_id in movie_ids]
+        for movie in user["seen_movies"]:
+            movie["mark"] = MarkRepository.get(movie_id=movie["movie_id"], user_id=user["user_id"]).json["note"]
+            movie["average_mark"] = MovieMeanResource.get(movie_id=movie["movie_id"]).json["average_mark"]
+        return jsonify({"user": user})
 
     @staticmethod
     @parse_params(

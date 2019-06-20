@@ -26,10 +26,14 @@ class MarkRepository:
         return mark.save()
 
     @staticmethod
-    def get(movie_id):
-        return Mark.query.filter_by(movie_id=movie_id)
+    def get_from_movie_id(movie_id):
+        return Mark.query.filter_by(movie_id=movie_id).all()
+
+    @staticmethod
+    def get_from_user_id(user_id):
+        return Mark.query.filter_by(user_id=user_id).all()
 
     @staticmethod
     def get_all():
         "Récupérer toutes les notes"
-        return Mark.query.filter_by()
+        return Mark.query.filter_by().all()
