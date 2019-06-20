@@ -6,6 +6,10 @@
     margin-top: 2em;
 }
 
+.loader {
+  margin-top: 10%;
+}
+
 .movies a {
     text-decoration: none;
     color: #ddd;

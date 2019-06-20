@@ -1,8 +1,10 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import logo from '../logo.png';
+
 import './Home.css';
+import logo from '../logo.png';
+import loader from '../loader.gif';
 
 
 class Home extends React.Component {
@@ -25,7 +27,7 @@ class Home extends React.Component {
                     <p>NETFLUX & CHULL</p>
                 </div>
                 <div className="movies">
-                    { this.state.shown.map(movie =>
+                    { this.state.movies.length ? this.state.shown.slice(0,3).map(movie =>
                     <Link to={ `/movies/${ movie.movie_id }` } key={ movie.movie_id } >
                         <div className="movie">
                             <h3 className="movie-title">{ movie.title }</h3>
@@ -33,7 +35,7 @@ class Home extends React.Component {
                             <i className="movie-year">{ movie.release_year }</i>
                             <p className="movie-mark">{ movie.average_mark } &#9733;</p>
                         </div>
-                    </Link>).slice(0,3)}
+                    </Link>) : <img className="loader" src={ loader } alt="Loader" /> }
 
                 </div>
             </div>

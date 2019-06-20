@@ -1,18 +1,32 @@
 import React from "react";
-import './Login.css';
+import axios from 'axios';
 
 import './Login.css';
 
-function Login() {
-    return (
-        <div className="login">
-            <h1>Connexion</h1>
-            <form action="" id="login-form" method="post">
-                <input id="login-input" type="text" placeholder="Adresse e-mail" />
-                <input id="login-btn" type="submit" value="Connexion" />
-            </form>
-        </div>
-    );
+class Login extends React.Component {
+
+    constructor() {
+        super();
+
+        this.login = this.login.bind(this);
+    }
+
+    login(event) {
+        axios.post('http://localhost:5000/api/login', { email: event.target.value }).then(response => window.location = "http://localhost:3000").catch(error => console.log(error));
+        event.preventDefault();
+    }
+
+    render() {
+        return (
+            <div className="login">
+                <h1>Connexion</h1>
+                <form action="" id="login-form" method="" onSubmit={ this.login } >
+                    <input id="login-input" type="text" placeholder="Adresse e-mail" required />
+                    <input id="login-btn" type="submit" value="Connexion" />
+                </form>
+            </div>
+        );
+    }
 }
 
 

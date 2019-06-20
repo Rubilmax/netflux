@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 import './Movies.css';
+import loader from '../loader.gif';
 
 class Movies extends React.Component {
 
@@ -12,7 +13,7 @@ class Movies extends React.Component {
 
         this.handleSearch = this.handleSearch.bind(this);
         this.search = this.search.bind(this);
-        this.getMovies();
+        //this.getMovies();
     }
 
     handleSearch(event) {
@@ -39,9 +40,9 @@ class Movies extends React.Component {
                         <input id="search-btn" type="submit" value="&#x1F50D;" />
                     </form>
                 </div>
-
+                
                 <div className="movies">
-                    { this.state.shown.map(movie =>
+                    { this.state.movies.length ? this.state.shown.map(movie =>
                     <Link to={ `/movies/${ movie.movie_id }` } key={ movie.movie_id } >
                         <div className="movie">
                             <h3 className="movie-title">{ movie.title }</h3>
@@ -49,7 +50,7 @@ class Movies extends React.Component {
                             <i className="movie-year">{ movie.release_year }</i>
                             <p className="movie-mark">{ movie.average_mark } &#9733;</p>
                         </div>
-                    </Link>) }
+                    </Link>) : <img className="loader" src={ loader } alt="Loader" /> }
                 </div>
             </div>
         );
