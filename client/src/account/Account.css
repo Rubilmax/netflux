@@ -49,3 +49,37 @@
 #login-btn:hover {
   background-color: rgb(54, 110, 57);
 }
+
+.container {
+  margin-top: 5em;
+}
+
+.seen-movies {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: #ddd;
+  margin-top: 2em;
+}
+
+.loader {
+margin-top: 10%;
+}
+
+.seen-movies a {
+  text-decoration: none;
+  color: #ddd;
+  transition: all .4s ease;
+}
+
+.seen-movies a:hover {
+  background: #212121;
+}
+
+.movie {
+  padding: 2em 2.6em;
+}
+
+.movie .movie-author {
+  margin: 0.25em;
+}
