@@ -19,7 +19,9 @@ class Movies extends React.Component {
     handleSearch(event) {
         this.setState({
             search: event.target.value,
-            shown: event.target.value ? this.state.movies.filter(movie => movie.title.toLowerCase().indexOf(event.target.value.toLowerCase()) !== -1) : this.state.movies
+            shown: event.target.value ? this.state.movies.filter(movie =>
+                movie.title.toLowerCase().indexOf(event.target.value.toLowerCase()) !== -1)
+                : this.state.movies
         });
     }
 
@@ -28,7 +30,8 @@ class Movies extends React.Component {
     }
 
     getMovies() {
-        return axios.get('http://localhost:5000/api/movies').then(response => this.setState({ movies: response.data.movies, shown: response.data.movies }));
+        return axios.get('http://localhost:5000/api/movies').then(response =>
+            this.setState({ movies: response.data.movies, shown: response.data.movies }));
     }
 
     render() {

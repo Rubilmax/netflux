@@ -18,7 +18,7 @@ class UserResource(Resource):
     @swag_from("../swagger/user/GET.yml")
     def get(user_id):
         """ Return an user key information based on his id """
-        user = UserRepository.get(user_id=user_id)
+        user = UserRepository.get_from_id(user_id=user_id)
         return jsonify({"user": user.json})
 
     @staticmethod
@@ -70,7 +70,5 @@ class UserLoginResource(Resource):
     )
     @swag_from("../swagger/user/LOGIN.yml")
     def post(email):
-        user = UserRepository.get(email=email).json
-        response = jsonify({ "user": user })
-        response.set_cookie(key="user_id", value=user["user_id"])
-        return response
+        user = UserRepository.get_from_email(email=email)
+        return jsonify({ "user": user.json })

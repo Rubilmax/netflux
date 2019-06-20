@@ -8,12 +8,12 @@ class UserRepository:
     """ The repository for the user model """
 
     @staticmethod
-    def get(user_id):
+    def get_from_id(user_id):
         """ Query a user by his unique id """
         return User.query.filter_by(user_id=user_id).one()
 
     @staticmethod
-    def get(email):
+    def get_from_email(email):
         """ Query a user by his email """
         return User.query.filter_by(email=email).one()
 

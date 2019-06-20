@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import './App.css';
 
 import Navbar from "../navbar/Navbar";
-import Login from "../login/Login";
+import Account from "../account/Account";
 import Register from "../register/Register";
 import Movies from "../movies/Movies";
 import Movie from '../movie/Movie';
@@ -17,10 +17,10 @@ function App() {
       <BrowserRouter>
         <Navbar />
 
-        <Route exact path="/home" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route exact strict path="/movies" component={Movies} />
         <Route path="/suggests" component={Interests} />
-        <Route path="/login" component={Login} />
+        <Route path="/account" component={Account} />
         <Route path="/register" component={Register} />
         
         <Route path="/movies/:movie_id" component={Movie} />
