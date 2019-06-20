@@ -13,6 +13,11 @@ class UserRepository:
         return User.query.filter_by(user_id=user_id).one()
 
     @staticmethod
+    def get(email):
+        """ Query a user by his email """
+        return User.query.filter_by(email=email).one()
+
+    @staticmethod
     def get_all():
         """ Query all saved users """
         return User.query.filter_by()

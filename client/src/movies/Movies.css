@@ -3,17 +3,59 @@
     flex-flow: row wrap;
     justify-content: center;
     color: #ddd;
+    margin-top: 2em;
+}
+
+.movies a {
+    text-decoration: none;
+    color: #ddd;
+    transition: all .4s ease;
+}
+
+.movies a:hover {
+    background: #212121;
 }
 
 .movie {
-    padding: 2.6em;
-}
-
-.movie .movie-title a {
-    text-decoration: none;
-    color: #ddd;
+    padding: 2em 2.6em;
 }
 
 .movie .movie-author {
     margin: 0.25em;
+}
+
+#search-input {
+  background: #212121;
+  border: none;
+  color: #eee;
+  height: 3.5em;
+  width: 25em;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 1em;
+  border-radius: 0.5em;
+  margin-top: 1em;
+}
+
+#search-input:focus {
+  outline: none;
+}
+
+#search-btn {
+  background: transparent;
+  padding: 0.5em;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 2em;
+  transition: all .4s ease;
+  margin-left: -5em;
+}
+
+#search-btn:hover {
+  background: #000;
+  transform: scale(1.4);
+}
+
+#search-btn:focus {
+  outline: none;
 }

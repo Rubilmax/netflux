@@ -61,3 +61,16 @@ class UserCreateResource(Resource):
         """ Create an user based on the sent information """
         user = UserRepository.create(last_name=last_name, first_name=first_name, email=email, age=age, gender=gender)
         return jsonify({"user": user.json})
+
+class UserLoginResource(Resource):
+
+    @staticmethod
+    @parse_params(
+        Argument("email", location="json", required=True, help="The email of the user.")
+    )
+    @swag_from("../swagger/user/LOGIN.yml")
+    def post(email):
+        user = UserRepository.get(email=email).json
+        response = jsonify({ "user": user })
+        response.set_cookie(key="user_id", value=user["user_id"])
+        return response
