@@ -1,1 +1,83 @@
+.register {
+    color: #ddd;
+}
 
+.register-form {
+    display: block;
+    width: 25em;
+    margin: auto;
+}
+  
+.register-input {
+    background: #212121;
+    border: none;
+    color: #eee;
+    height: 3.5em;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 1em;
+    margin: 0;
+}
+
+.register-input.email {
+    width: 25em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+.register-input.first-name, .register-input.last-name {
+    width: 10em;
+}
+
+.register-input.age {
+    width: 5em;
+}
+  
+.register-input:focus {
+    outline: none;
+}
+  
+.register-btn {
+    background-color: rgb(40, 75, 42);
+    border: none;
+    color: #ccc;
+    font-size: 1em;
+    height: 3.5em;
+    width: 25em;
+    cursor: pointer;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    transition: all .4s ease;
+}
+  
+.register-btn:focus {
+    outline: none;
+}
+  
+.register-btn:hover {
+    background-color: rgb(54, 110, 57);
+}
+
+.gender-input {
+    display: inline-block;
+    width: 33.3333%;
+    margin: 0;
+}
+
+.gender-input > label {
+    padding: 1em 2em;
+    background: #212121;
+    display: block;
+    color: #888;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.gender-input input {
+    display: none;
+}
+
+.gender-input input:checked + label {
+    background: #414141;
+    color: #ddd;
+}

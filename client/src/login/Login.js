@@ -1,17 +1,16 @@
 import React from "react";
 import './Login.css';
 
+import './Login.css';
+
 function Login() {
     return (
-        <div class="Login">
-        <div>Connexion</div>
-        <div class="Connection">
-            <form action="/search" id="searchthis" method="get">
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Adresse e-mail" />
+        <div className="login">
+            <h1>Connexion</h1>
+            <form action="" id="login-form" method="post">
+                <input id="login-input" type="text" placeholder="Adresse e-mail" />
+                <input id="login-btn" type="submit" value="Connexion" />
             </form>
-            <button type="submit" class="registerbtn">Se Connecter</button>
-        </div>
         </div>
     );
 }
