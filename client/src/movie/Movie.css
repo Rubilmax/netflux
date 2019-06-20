@@ -1,3 +1,43 @@
 .movie {
     color: #ddd;
 }
+
+  #movie-input {
+    background: #212121;
+    border: none;
+    color: #eee;
+    height: 3.5em;
+    width: 25em;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 1em;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    margin: 0;
+  }
+  
+  #movie-input:focus {
+    outline: none;
+  }
+  
+  #movie-btn {
+    background-color: rgb(40, 75, 42);
+    border: none;
+    color: #ccc;
+    font-size: 1em;
+    height: 3.5em;
+    width: 9.5em;
+    cursor: pointer;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    transition: all .4s ease;
+  }
+  
+  #movie-btn:focus {
+    outline: none;
+  }
+  
+  #movie-btn:hover {
+    background-color: rgb(54, 110, 57);
+  }
+  

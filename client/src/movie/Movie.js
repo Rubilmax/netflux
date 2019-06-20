@@ -21,6 +21,13 @@ class Movie extends React.Component {
                 <h1 className="movie-title">{ this.state.movie.title }</h1>
                 <p className="movie-desc">Réalisé par <i>{ this.state.movie.author }</i> en { this.state.movie.release_year }</p>
                 <p className="movie-mark">Note moyenne des téléspectateurs : { this.state.movie.average_mark } &#9733;</p>
+                <div className="movie">
+                    <h1>Noter le film</h1>
+                    <form action="" id="movie-form" method="post">
+                        <input id="movie-input" type="text" placeholder="Note" />
+                        <input id="movie-btn" type="submit" value="Noter" />
+                    </form>
+                </div>
             </div>
         );
     }
