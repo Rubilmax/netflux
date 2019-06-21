@@ -38,7 +38,7 @@ class Register extends React.Component {
                 <input className="register-input email" name="email" type="email" placeholder="Adresse e-mail" required />
                 <input className="register-input first-name" name="first_name" type="text" placeholder="Prénom" required />
                 <input className="register-input last-name" name="last_name" type="text" placeholder="Nom" required />
-                <input className="register-input age" name="age" type="number" placeholder="Age" required />
+                <input className="register-input age" name="age" type="number" min="1" max="99" placeholder="Age" required />
 
                 <div className="gender-input">
                     <input id="male" type="radio" name="gender" value="male" />
@@ -54,9 +54,10 @@ class Register extends React.Component {
                 </div>
                 <input className="register-btn" type="submit" value="Inscription" />
             </form>
+
             { this.state.message &&
                 <div className="message">
-                { this.state.message }
+                    { this.state.message }
                 </div>
             }
         </div>

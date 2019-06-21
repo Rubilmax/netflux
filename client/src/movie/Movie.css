@@ -20,7 +20,7 @@
     outline: none;
   }
   
-  #movie-btn {
+#movie-btn {
     background-color: rgb(40, 75, 42);
     border: none;
     color: #ccc;
@@ -31,13 +31,21 @@
     border-top-right-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
     transition: all .4s ease;
-  }
+}
   
-  #movie-btn:focus {
+#movie-btn:focus {
     outline: none;
-  }
+}
   
-  #movie-btn:hover {
+#movie-btn:hover {
     background-color: rgb(54, 110, 57);
-  }
-  
+}
+
+.message {
+  padding: 1em;
+  background: rgb(25, 122, 62);
+  border: 2px solid rgb(11, 117, 43);
+  border-radius: 1em;
+  margin: 1em auto;
+  width: 20em;
+}

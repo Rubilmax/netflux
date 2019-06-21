@@ -55,7 +55,7 @@ class Account extends React.Component {
                             <h1>Mon compte</h1>
                             <p>Bienvenue sur votre page personnelle, { this.state.user.first_name } !</p>
                             <div className="container">
-                                <h2>Les films que vous avez déjà vu</h2>
+                                <h2>Les films que vous avez déjà vus</h2>
                                 <div className="seen-movies">
                                     { this.state.user.seen_movies.length ? this.state.user.seen_movies.map(movie =>
                                         <Link to={ `/movies/${ movie.movie_id }` } key={ movie.movie_id } >
