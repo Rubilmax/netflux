@@ -8,7 +8,7 @@ function Navbar() {
     return (
       <div className="navbar">
         <ul className="nav-links">
-          <li className="nav-link"><NavLink to="/" activeClassName="nav-link-active">Accueil</NavLink></li>
+          <li className="nav-link"><NavLink exact to="/" activeClassName="nav-link-active">Accueil</NavLink></li>
           <li className="nav-link"><NavLink to="/movies" activeClassName="nav-link-active">Films</NavLink></li>
           <li className="nav-link"><NavLink to="/suggests" activeClassName="nav-link-active">Suggestions</NavLink></li>
           { !cookie.load('user_id') ?
