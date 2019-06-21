@@ -26,6 +26,8 @@ class MovieResource(Resource):
 
     @staticmethod
     @parse_params(
+        Argument("title", location="json", required=True, help="The title year of the movie."),
+        Argument("author", location="json", required=True, help="The author of the movie."),
         Argument("release_year", location="json", required=True, help="The release year of the movie.")
     )
     @swag_from("../swagger/movie/PUT.yml")
