@@ -10,7 +10,7 @@ class MovieRepository:
     @staticmethod
     def get(movie_id):
         """ Query a movie by id """
-        return Movie.query.filter_by(movie_id=movie_id).one()
+        return Movie.query.filter_by(movie_id=movie_id).first()
 
     @staticmethod
     def get_all():

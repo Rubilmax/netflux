@@ -9,7 +9,7 @@ class MarkRepository:
     @staticmethod
     def get(movie_id, user_id):
         """ Query a mark by movie_id and user_id """
-        return Mark.query.filter_by(movie_id=movie_id, user_id=user_id).one()
+        return Mark.query.filter_by(movie_id=movie_id, user_id=user_id).first()
 
     def update(self, movie_id, user_id, note):
         """ Update a mark """

@@ -10,12 +10,12 @@ class UserRepository:
     @staticmethod
     def get_from_id(user_id):
         """ Query a user by his unique id """
-        return User.query.filter_by(user_id=user_id).one()
+        return User.query.filter_by(user_id=user_id).first()
 
     @staticmethod
     def get_from_email(email):
         """ Query a user by his email """
-        return User.query.filter_by(email=email).one()
+        return User.query.filter_by(email=email).first()
 
     @staticmethod
     def get_all():
