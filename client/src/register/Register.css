@@ -81,3 +81,12 @@
     background: #414141;
     color: #ddd;
 }
+
+.message {
+  padding: 1em;
+  background: rgb(25, 122, 62);
+  border: 2px solid rgb(11, 117, 43);
+  border-radius: 1em;
+  margin: 1em auto;
+  width: 20em;
+}

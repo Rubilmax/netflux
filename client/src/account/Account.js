@@ -19,7 +19,7 @@ class Account extends React.Component {
     }
 
     login(event) {
-        axios.post('http://localhost:5000/api/login', { email: event.target.children[0].value })
+        axios.post('http://localhost:5000/api/login', { email: event.target.email.value })
             .then(response => {
                 cookie.save("user_id", response.data.user.user_id, { path: "/" });
                 window.location.reload();
@@ -40,7 +40,7 @@ class Account extends React.Component {
                     <div className="login">
                         <h1>Connexion</h1>
                         <form id="login-form" onSubmit={ this.login } >
-                            <input id="login-input" type="text" placeholder="Adresse e-mail" required />
+                            <input id="login-input" name="email" type="text" placeholder="Adresse e-mail" required />
                             <input id="login-btn" type="submit" value="Connexion" />
                         </form>
         
