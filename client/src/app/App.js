@@ -8,7 +8,7 @@ import Account from "../account/Account";
 import Register from "../register/Register";
 import Movies from "../movies/Movies";
 import Movie from '../movie/Movie';
-import Interests from "../interests/Interests";
+import Suggests from "../suggests/Suggests";
 import Home from "../home/Home";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
 
         <Route exact path="/" component={Home} />
         <Route exact strict path="/movies" component={Movies} />
-        <Route path="/suggests" component={Interests} />
+        <Route path="/suggests" component={Suggests} />
         <Route path="/account" component={Account} />
         <Route path="/register" component={Register} />
         

@@ -20,7 +20,7 @@ class Movies extends React.Component {
         this.setState({
             search: event.target.value,
             shown: event.target.value ? this.state.movies.filter(movie =>
-                movie.title.toLowerCase().indexOf(event.target.value.toLowerCase()) !== -1)
+                movie.title.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").indexOf(event.target.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")) !== -1)
                 : this.state.movies
         });
     }

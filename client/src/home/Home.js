@@ -26,6 +26,7 @@ class Home extends React.Component {
                     <img src={logo} alt="logo" />
                     <p>NETFLUX & CHULL</p>
                 </div>
+                <h2 className="movies-intro">Vous pourriez apprécier</h2>
                 <div className="movies">
                     { this.state.movies.length ? this.state.shown.slice(0,3).map(movie =>
                     <Link to={ `/movies/${ movie.movie_id }` } key={ movie.movie_id } >
