@@ -1,3 +1,33 @@
 .title {
     color: #ddd;
 }
+
+.movies {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: #ddd;
+    margin-top: 2em;
+}
+
+.loader {
+  margin-top: 10%;
+}
+
+.movies a {
+    text-decoration: none;
+    color: #ddd;
+    transition: all .4s ease;
+}
+
+.movies a:hover {
+    background: #212121;
+}
+
+.movie {
+    padding: 2em 2.6em;
+}
+
+.movie .movie-author {
+    margin: 0.25em;
+}

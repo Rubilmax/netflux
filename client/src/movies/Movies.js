@@ -30,7 +30,7 @@ class Movies extends React.Component {
     }
 
     getMovies() {
-        return axios.get('http://localhost:5000/api/movies').then(response =>
+        axios.get('http://localhost:5000/api/movies').then(response =>
             this.setState({ movies: response.data.movies, shown: response.data.movies }));
     }
 
